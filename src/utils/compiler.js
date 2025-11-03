@@ -1,6 +1,7 @@
 
 import { parse } from '@babel/parser';
 import traverse from '@babel/traverse';
+import { useRef } from 'react';
 
 export function parseAndAnalyze(code) {
   try {
@@ -21,4 +22,10 @@ export function parseAndAnalyze(code) {
   } catch (err) {
     return '❌ Error parsing code: ' + err.message;
   }
+}
+
+export function useRenderCount(name) {
+  const count = useRef(0);
+  count.current++;
+  console.log(`${name} rendered ${count.current} times`);
 }
