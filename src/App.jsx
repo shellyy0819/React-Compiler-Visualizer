@@ -12,6 +12,7 @@ export default function App() {
       {/* <h1>⚛️ React Compiler Visualizer</h1>
       <Visualizer /> */}
 
+      {/* Before and After Compiler usage effect  */}
       {/* <BeforeCompilerExample/> */}
       <AfterCompilerExample/>
     </div>
